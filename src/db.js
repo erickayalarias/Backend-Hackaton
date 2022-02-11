@@ -1,8 +1,8 @@
 const {connect, connection} = require("mongoose")
+const {MONGODB_URI} = require("./config")
 
 const connectDB = async ()=>{
-    // await connect("mongodb+srv://hackaton2022:hackaton2022@cluster0.w2ojj.mongodb.net/hackaton2022?retryWrites=true&w=majority")
-    await connect("mongodb+srv://Erick:Hackaton2022@cluster0.3xi5g.mongodb.net/hackaton2022?retryWrites=true&w=majority")
+    await connect(MONGODB_URI)
 }
 connection.on("error",  err=> console.log(err))
 module.exports ={

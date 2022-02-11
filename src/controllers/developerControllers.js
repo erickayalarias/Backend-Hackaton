@@ -1,11 +1,16 @@
 const Developer = require("../models/developers")
 const {connection} = require("../db")
 
+
+
 const insertDeveloper = async (developer) =>{
     await Developer.create(developer)
     console.log("New assistant inserted")
     await connection.close()
 }
+
+
+
 const listDevelopers = async ()=>{
     const developers= await Developer.find().lean();
     console.table(developers.map(developer => ({
@@ -19,11 +24,16 @@ const listDevelopers = async ()=>{
     await connection.close();
     process.exit(0);
 }
+
+
+
 const removeDeveloper = async(_id)=>{
     await Developer.findByIdAndDelete(_id)
     console.log("Assistant deleted")
     await connection.close()
 }
+
+
 
 const updateDeveloper = async(_id, newdeveloper)=>{
     await Developer.updateOne({_id}, newdeveloper);
@@ -31,9 +41,10 @@ const updateDeveloper = async(_id, newdeveloper)=>{
     await connection.close();
 }
 
+
+
 const findDeveloper = async (devUser)=> {
    const search =  new RegExp(devUser, "i");
-//    const id= "_id";
    const user = await Developer.find({
        $or:[{name: search},{email: search}, {category: search},{date: search}]
    })
@@ -59,6 +70,9 @@ const findDeveloper = async (devUser)=> {
    }
 //    console.log(devUser)
 }
+
+
+
 module.exports = {
     insertDeveloper,
     listDevelopers,

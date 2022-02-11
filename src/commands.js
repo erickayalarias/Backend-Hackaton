@@ -35,6 +35,10 @@ const developerQuestions=    [
     }
 
 ];
+//! Here is the commands. You can List, Add, Delete, Update and Find the developers
+
+// Add a new developer at the database
+
 program.command("add").
 alias("a")
 .description("Add a new developer to the database")
@@ -43,10 +47,10 @@ alias("a")
     insertDeveloper(answers);
 })
 
-//! Here is the commands. You can List, Add, Delete, Update and Find the developers
 
 
-// List the list of the developers in JSON FILE 
+// List the list of the developers in JSON FILE
+
 program
 .command("list")
 .alias("l")
