@@ -10,4 +10,4 @@ const developerSchema = new Schema({
     versionKey:false
 })
 
-module.exports = model("developers", developerSchema)
+module.exports = model("mwc-assistants", developerSchema)

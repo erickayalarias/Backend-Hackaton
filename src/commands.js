@@ -36,29 +36,65 @@ const developerQuestions=    [
 
 ];
 program.command("add").
-alias("a").action( async ()=>{
+alias("a")
+.description("Add a new developer to the database")
+.action( async ()=>{
     const answers= await prompt(developerQuestions)
     insertDeveloper(answers);
 })
 
-//listar tareas
-// Aqui podeis cambiar el command y alias
-program.command("list").alias("l").action(()=> listDevelopers())
-program.command("delete <id>").alias("d").action((_id)=> removeDeveloper(_id)
+//! Here is the commands. You can List, Add, Delete, Update and Find the developers
+
+
+// List the list of the developers in JSON FILE 
+program
+.command("list")
+.alias("l")
+.description("Show the list of the developers that are going to assist at the MWC")
+.action(()=> listDevelopers())
+
+// Delete the developer passing the _id
+
+program
+.command("delete <id>")
+.alias("d")
+.description("Delete the developer selected (You have to pass the _id of the developer) ")
+.action((_id)=> removeDeveloper(_id)
 )
-program.command("update <id>").alias("u").action( async (_id)=>{
+
+//Update the developer 
+
+program
+.command("update <id>")
+.alias("u")
+.description("Update the information of the developer")
+.action( async (_id)=>{
     if (!_id) return console.log("please provide id")
-   const answers = await prompt(developerQuestions)
-//    console.log(answers)
-   await updateDeveloper(_id, answers)
+    const answers = await prompt(developerQuestions)
+    await updateDeveloper(_id, answers)
 }
 )
-program.command("MWC-days").alias("MWC").action(()=>{
+
+
+//Show the description of the days that the MWC are going to be
+
+program
+.command("MWC-days")
+.description("Show the days that the MWC are going to be")
+.alias("MWC")
+.action(()=>{
     console.log("The event of the MWC are going to be between these days:\n Feb 28, 2021 \n Mar 1, 2021 \n Mar 2, 2021 \n Mar 3, 2021")
     process.exit(0);
 })
 
-program.command("find <devUser>").alias("f").action((devUser)=> findDeveloper(devUser))
+
+//Find the developers via Name/Email/Category
+
+program
+.command("find <devUser>")
+.alias("f")
+.description("You can find any user or show only the category (You can put his Name/Email/Category)")
+.action((devUser)=> findDeveloper(devUser))
 
 
 program.parse(process.argv);
