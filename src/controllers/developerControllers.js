@@ -78,5 +78,6 @@ module.exports = {
     listDevelopers,
     removeDeveloper,
     updateDeveloper,
-    findDeveloper
+    findDeveloper,
+    Developer
 };

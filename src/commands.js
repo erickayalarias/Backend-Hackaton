@@ -1,5 +1,5 @@
 const {program} = require("commander");
-const { prompt} = require("inquirer");
+const {prompt} = require("inquirer");
 const {listDevelopers, removeDeveloper, updateDeveloper, insertDeveloper, findDeveloper} =require("./controllers/developerControllers")
 
 program.version("1.0.0").description("Command line tool for managing the developers of the MWC");
@@ -35,6 +35,9 @@ const developerQuestions=    [
     }
 
 ];
+
+
+
 //! Here is the commands. You can List, Add, Delete, Update and Find the developers
 
 // Add a new developer at the database
