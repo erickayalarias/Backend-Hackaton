@@ -3,33 +3,15 @@ This project is made for the competition of the HACKATON OF 2022
 <div id="top"></div>
 
 
-
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
-
-![LinkedIn][linkedin-shield][https://www.linkedin.com/in/erick-ayala-arias-34b787151/]
+[LinkedIn][linkedin-shield][https://www.linkedin.com/in/erick-ayala-arias-34b787151/]
 
 
-
-<h3 align="center">Backend-Hackaton</h3>
-
+<h3 align="center">Backend-Hackaton</h3>  
   <p align="center">
     project_description
     <br />
-    <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/erickayalarias/Backend-Hackaton"><strong>Explore the docs »</strong></a>
     <br />
-    <br />
-    <a href="https://github.com/github_username/repo_name">View Demo</a>
-    ·
-    <a href="https://github.com/github_username/repo_name/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/github_username/repo_name/issues">Request Feature</a>
   </p>
 </div>
 
@@ -61,8 +43,6 @@ This project is made for the competition of the HACKATON OF 2022
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
 
 This project is made for the HACKATON OF 2022, is a backend project using CLI, it let you access the information of the MWC, edit any developer, update and delete any developer and find by category or date.
 
@@ -71,8 +51,16 @@ I used Mongodb to deploy the database in the cloud and used mongoose to make the
 You will find in src-folder all the files and folders in order, also some comments in the files.
 
 NOTE: I didn't make a lot of comments because in most cases the name of the function, tell you what that function is doing.
+<h3 align="center">Backend-Hackaton</h3>  
+  <p align="center">
+    project_description
+    <br />
+    <a href="https://github.com/erickayalarias/Backend-Hackaton"><strong>Explore the docs »</strong></a>
+    <br />
+  </p>
+</div>
 
-                        LIST OF TASKS DEMANDED
+<p align="center"> LIST OF TASKS DEMANDED</p>
 
 DONE ✅ Task 1 → Make a model that has the next information: Name, Email, Category ( Front, Back, Mobile, Data), Phone, Days to assis the mobile ( 28 Feb, 1 -3 Marzo).
 
@@ -98,11 +86,11 @@ DONE ✅ Task 5 → Generate a command CLI that let you add a new developer and 
 * [Javascript](https://www.javascript.com/)
 
 Dependencies used:
-Commander
-cross-env
-dotenv
-inquirer
-mongoose
+Commander,
+cross-env,
+dotenv,
+inquirer,
+mongoose,
 jest
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -118,9 +106,11 @@ Once started you have to open the terminal and you can start .
 
 There are two databases one control the main database with the command (mwc) and the other is for testing purpose only (npm run test) and if you want to see the test Database you can do (npm run dbTest).
 
-Main                               command: mwc
-Tests                              command: npm run test
-Test to see the database for test  command: npm run dbTest
+
+<p align="center">Main command:  mwc </p>
+<p align="center">Test command: npm run test </p>
+<p align="center">Database-Test command:  npm run dbTest</p>
+
 
 You will find more info about the commands in Allcommands section.
 
