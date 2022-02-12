@@ -5,7 +5,7 @@ const {connection} = require("../database/db")
 //! Here you will find the controllers that you pass from commands
 
 
-const insertDeveloper = async (developer) =>{
+const insertDev = async (developer) =>{
     await Developer.create(developer)
     console.log(`Developer ${developer.name} added succesful`)
     await connection.close()
@@ -13,7 +13,7 @@ const insertDeveloper = async (developer) =>{
 
 
 
-const listDevelopers = async ()=>{
+const listDev = async ()=>{
     const developers= await Developer.find().lean();
     console.table(developers.map(developer => ({
         _id: developer._id.toString(),
@@ -29,7 +29,7 @@ const listDevelopers = async ()=>{
 
 
 
-const removeDeveloper = async(_id)=>{
+const removeDev = async(_id)=>{
     await Developer.findByIdAndDelete(_id)
     console.log("Developer deleted")
     await connection.close()
@@ -37,7 +37,7 @@ const removeDeveloper = async(_id)=>{
 
 
 
-const updateDeveloper = async(_id, newdeveloper)=>{
+const updateDev = async(_id, newdeveloper)=>{
     await Developer.updateOne({_id}, newdeveloper);
     console.log("Developer updated");
     await connection.close();
@@ -45,7 +45,7 @@ const updateDeveloper = async(_id, newdeveloper)=>{
 
 
 
-const findDeveloper = async (devUser)=> {
+const filterDev = async (devUser)=> {
    const search =  new RegExp(devUser, "i");
    const user = await Developer.find({
        $or:[ {category: search},{date: search}]
@@ -72,10 +72,9 @@ const findDeveloper = async (devUser)=> {
 
 
 module.exports = {
-    insertDeveloper,
-    listDevelopers,
-    removeDeveloper,
-    updateDeveloper,
-    findDeveloper,
-    Developer
+    insertDev,
+    listDev,
+    removeDev,
+    updateDev,
+    filterDev
 };

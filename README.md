@@ -1,11 +1,12 @@
 # Backend-Hackaton
+
 This project is made for the competition of the HACKATON OF 2022
 
 
 <h3 align="center">Backend-Hackaton</h3>  
   <p align="center">
     <br />
-    <a href="https://github.com/erickayalarias/Backend-Hackaton"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/erickayalarias/Backend-Hackaton"><strong> Explore the docs </strong></a>
     <br />
   </p>
 </div>
@@ -25,8 +26,8 @@ This project is made for the competition of the HACKATON OF 2022
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
-        <li><a href="#allCommands">allCommands</a></li>
         <li><a href="#installation">Installation</a></li>
+        <li><a href="#allCommands">allCommands</a></li>
       </ul>
     </li>
     <li><a href="#contact">Contact</a></li>
@@ -35,7 +36,6 @@ This project is made for the competition of the HACKATON OF 2022
 
 
 
-<!-- ABOUT THE PROJECT -->
 ## About The Project
 
 
@@ -45,7 +45,7 @@ I used Mongodb to deploy the database in the cloud and used mongoose to make the
 
 You will find in src-folder all the files and folders in order, also some comments in the files.
 
-
+* You will see that the file .env its not in .gitignore, because there is no sensitive information in the database but i know that normally the .env file has to be in gitignore also in config file(src/config/config) i check if the .env its not there use this URL.I only use this database for this project so no sensitive information is public.
 
 <p align="center"> LIST OF TASKS DEMANDED</p>
 
@@ -133,7 +133,7 @@ For example <b>mwc l</b> or <b>mwc list </b> will do the same.  <br />
 
 <b>npm run test</b>           -It will start the tests, you can check how the test works in src/test/developer.test.js.<br /><br />
 
-<b>npm run dbTest</b>         -You will find the database for testings, have the same information that the original database and you can execute the same commands that mwc does.
+<b>npm run dbTest</b>         -You will find the database for testings, have the same information that the original database and you can execute the same commands that mwc does. example: npm run dbTest list
 
 
 

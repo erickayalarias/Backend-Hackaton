@@ -1,8 +1,9 @@
 const {program} = require("commander");
 const {prompt} = require("inquirer");
-const {listDevelopers, removeDeveloper, updateDeveloper, insertDeveloper, findDeveloper} =require("../controllers/developerControllers")
+const {listDev, removeDev, updateDev, insertDev, filterDev} =require("../controllers/developerControllers")
 const {Questions} = require("./questions")
 
+//! Here is the commands. You can List, Add, Delete, Update and Find by Category or Date
 
 program
 .version("Hackaton 1.0")
@@ -10,18 +11,18 @@ program
 
 
 
-//! Here is the commands. You can List, Add, Delete, Update and Find by Category or Date
+
 
 
 // Add a new developer at the database
 
 program
-.command("add").
-alias("a")
+.command("add")
+.alias("a")
 .description("Add a new developer to the database")
 .action( async ()=>{
     const answers= await prompt(Questions())
-    insertDeveloper(answers);
+    insertDev(answers);
 })
 
 
@@ -32,7 +33,7 @@ program
 .command("list")
 .alias("l")
 .description("Show the list of the developers that are going to assist at the MWC")
-.action(()=> listDevelopers())
+.action(()=> listDev())
 
 
 // Delete the developer
@@ -47,7 +48,7 @@ program
             message: "Pass the _id to delete the Developer (If ctrl-v doesnt work try ctrl-alt-v or right click): ",
             name:"id" 
     })
-    removeDeveloper(dev.id)
+    removeDev(dev.id)
 })
 
 
@@ -60,7 +61,7 @@ program
 .action( async (_id)=>{
     if (!_id) return console.log("Provide _id")
     const answers = await prompt(Questions())
-    await updateDeveloper(_id, answers)
+    await updateDev(_id, answers)
 }
 )
 
@@ -81,18 +82,14 @@ program
 })
 
 
-//Find the developers 
+//Filter the developers
 
 
 program
 .command("find <devUser>")
 .alias("f")
 .description("You can find the developers in a certain category or a date)")
-.action((devUser)=>{
-    if (!devUser) return console.log("Provide _id")
-    findDeveloper(devUser)
-
-})
+.action((devUser)=>filterDev(devUser))
 
 
 program.parse(process.argv);
