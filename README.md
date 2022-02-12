@@ -58,7 +58,8 @@ DONE ✅ Task 3 → Generate a command CLI that make a display of the informatio
 DONE ✅ Task 4 → Generate a command CLI that make a display of the developers.
 
 DONE ✅ Task 5 → Generate a command CLI that let you add a new developer and update the Database.
-</br></br>
+</br>
+</br>
 ✅ Also added, some new features like edit, delete, find by category or date
 
 
