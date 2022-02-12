@@ -7,7 +7,7 @@ const {connection} = require("../database/db")
 
 const insertDev = async (developer) =>{
     await Developer.create(developer)
-    console.log(`Developer ${developer.name} added succesful`)
+    console.log(`Developer ${developer.name} added`)
     await connection.close()
 }
 
