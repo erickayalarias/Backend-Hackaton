@@ -20,7 +20,7 @@ This project is made for the competition of the HACKATON OF 2022
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
 
-[![LinkedIn][linkedin-shield]][https://www.linkedin.com/in/erick-ayala-arias-34b787151/]
+![LinkedIn][linkedin-shield][https://www.linkedin.com/in/erick-ayala-arias-34b787151/]
 
 
 
