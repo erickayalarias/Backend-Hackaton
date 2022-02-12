@@ -1,40 +1,12 @@
 const {program} = require("commander");
 const {prompt} = require("inquirer");
-const {listDevelopers, removeDeveloper, updateDeveloper, insertDeveloper, findDeveloper} =require("./controllers/developerControllers")
+const {listDevelopers, removeDeveloper, updateDeveloper, insertDeveloper, findDeveloper} =require("../controllers/developerControllers")
+const {Questions} = require("./questions")
 
-program.version("1.0.0").description("Command line tool for managing the developers of the MWC");
-const developerQuestions=    [
-    {
-        type: "input",
-        message: "Put the name",
-        name:"name"
-    },
-     {
-        type: "input",
-        message: "Put the email",
-        name:"email"
-    },
-    {
-        type:"list",
-        name:"category",
-        choices:[
-            "Front","Back","Mobile", "Data",
-        ]
-    },
-    {
-        type:"input",
-        message:"Put your phone",
-        name:"phone"
-    },
-    {
-        type:"list",
-        name:"date",
-        choices:[
-            "Feb 28, 2021","Mar 1, 2021","Mar 2, 2021", "Mar 3, 2021",
-        ]
-    }
 
-];
+program
+.version("1.0")
+.description("Command line for managing the developers, you can see the help section that will describe the commands and how work with them.");
 
 
 
@@ -42,11 +14,12 @@ const developerQuestions=    [
 
 // Add a new developer at the database
 
-program.command("add").
+program
+.command("add").
 alias("a")
 .description("Add a new developer to the database")
 .action( async ()=>{
-    const answers= await prompt(developerQuestions)
+    const answers= await prompt(Questions())
     insertDeveloper(answers);
 })
 
@@ -77,7 +50,7 @@ program
 .description("Update the information of the developer")
 .action( async (_id)=>{
     if (!_id) return console.log("please provide id")
-    const answers = await prompt(developerQuestions)
+    const answers = await prompt(Questions())
     await updateDeveloper(_id, answers)
 }
 )
