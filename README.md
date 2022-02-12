@@ -1,14 +1,13 @@
 # Backend-Hackaton
 This project is made for the competition of the HACKATON OF 2022
-<div id="top"></div>
 
 
-[LinkedIn][linkedin-shield][https://www.linkedin.com/in/erick-ayala-arias-34b787151/]
+
+[LinkedIn][https://www.linkedin.com/in/erick-ayala-arias-34b787151/]
 
 
 <h3 align="center">Backend-Hackaton</h3>  
   <p align="center">
-    project_description
     <br />
     <a href="https://github.com/erickayalarias/Backend-Hackaton"><strong>Explore the docs »</strong></a>
     <br />
@@ -19,7 +18,7 @@ This project is made for the competition of the HACKATON OF 2022
 
 <!-- TABLE OF CONTENTS -->
 <details>
-  <summary>Table of Contents</summary>
+  <summary><b>Table of Contents</b></summary>
   <ol>
     <li>
       <a href="#about-the-project">About The Project</a>
@@ -51,14 +50,6 @@ I used Mongodb to deploy the database in the cloud and used mongoose to make the
 You will find in src-folder all the files and folders in order, also some comments in the files.
 
 NOTE: I didn't make a lot of comments because in most cases the name of the function, tell you what that function is doing.
-<h3 align="center">Backend-Hackaton</h3>  
-  <p align="center">
-    project_description
-    <br />
-    <a href="https://github.com/erickayalarias/Backend-Hackaton"><strong>Explore the docs »</strong></a>
-    <br />
-  </p>
-</div>
 
 <p align="center"> LIST OF TASKS DEMANDED</p>
 
@@ -72,7 +63,7 @@ DONE ✅ Task 4 → Generate a command CLI that make a display of the developers
 
 DONE ✅ Task 5 → Generate a command CLI that let you add a new developer and update the Database.
 
-✅ Also added, some new features like edit, delete, find by category or date
+DONE ✅ Also added, some new features like edit, delete, find by category or date
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -120,8 +111,8 @@ There are two databases one control the main database with the command (mwc) and
 <p align="center"><b>List of all the commands:</b> </p>
 
 
-mwc: Show a little description of everithing and also explain how the commands works and the shortcuts that they have. 
-For example [mwc l] or [mwc list] will do the same.  <br />
+mwc: Show a little description of everything and also explain how the commands works and the shortcuts that they have. 
+For example <b>mwc l</b> or <b>mwc list </b> will do the same.  <br />
 
 mwc l|list             -Show the list of the developers that are going to assist at the MWC.<br /> <br />
 mwc delete|d           -It will ask for the _id, and then its going to delete that developer.<br /><br />
