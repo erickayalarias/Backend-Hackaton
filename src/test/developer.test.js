@@ -16,7 +16,7 @@ describe("Test backend", ()=>{
     afterAll(async ()=>{
         await connection.close();
     });
-    
+
     //Testings
 
     //You can change the value of const expected to see errors in the test if you want and dont worry this database is only for testings(With the same info of the original)
@@ -28,23 +28,22 @@ describe("Test backend", ()=>{
 
     describe("get developer", () => {
         it("gets a developer", async ()=>{
-           const developer = new Developer({name:"getTest", email:"getTest@gmail.com", category:"Back", phone:"652233009", date:"Mar 2, 2021"});
-           await developer.save();
-           const foundDeveloper= await Developer.findOne({name: "getTest"});
-           const expected = "getTest";
-           const actual = foundDeveloper.name;
-           expect(actual).toEqual(expected);
+            const developer = new Developer({name:"getTest", email:"getTest@gmail.com", category:"Back", phone:"652233009", date:"Mar 2, 2021"});
+            await developer.save();
+            const foundDeveloper= await Developer.findOne({name: "getTest"});
+            const expected = "getTest";
+            const actual = foundDeveloper.name;
+            expect(actual).toEqual(expected);
         })
     });
 
     describe("save a developer", () => {
         it("save a developer", async ()=>{
-           const developer = new Developer({name:"saveTest", email:"saveTest@gmail.com", category:"Back", phone:"652233009", date:"Mar 2, 2021"});
-           const saveDeveloper = await developer.save();
-           const expected = "saveTest";
-           const actual =saveDeveloper.name;
-        //    console.log(actual)
-           expect(actual).toEqual(expected);
+            const developer = new Developer({name:"saveTest", email:"saveTest@gmail.com", category:"Back", phone:"652233009", date:"Mar 2, 2021"});
+            const saveDeveloper = await developer.save();
+            const expected = "saveTest";
+            const actual =saveDeveloper.name;
+            expect(actual).toEqual(expected);
         })
     });
 

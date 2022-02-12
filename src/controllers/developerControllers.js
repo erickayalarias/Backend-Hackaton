@@ -46,26 +46,26 @@ const updateDev = async(_id, newdeveloper)=>{
 
 
 const filterDev = async (devUser)=> {
-   const search =  new RegExp(devUser, "i");
-   const user = await Developer.find({
-       $or:[ {category: search},{date: search}]
-   })
-   if(user.length === 0){
-       console.log("Developers not found")
-       await connection.close();
-       process.exit(0);
-   }else{
-       console.table(user.map(developer =>({
+    const search =  new RegExp(devUser, "i");
+    const user = await Developer.find({
+        $or:[ {category: search},{date: search}]
+    })
+    if(user.length === 0){
+        console.log("Developers not found")
+        await connection.close();
+        process.exit(0);
+    }else{
+        console.table(user.map(developer =>({
         _id: developer._id.toString(),
                 name: developer.name,
                 email: developer.email,
                 category: developer.category,
                 phone:developer.phone,
                 date:developer.date
-       })))
-       await connection.close();
-       process.exit(0);
-   }
+        })))
+        await connection.close();
+        process.exit(0);
+    }
 }
 
 
