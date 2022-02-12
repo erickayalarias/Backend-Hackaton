@@ -2,7 +2,7 @@ const Developer = require("../models/modelDeveloper")
 const {connection} = require("../database/db")
 
 
-//! There you will find the controllers that you pass from commands
+//! Here you will find the controllers that you pass from commands
 
 
 const insertDeveloper = async (developer) =>{
@@ -31,7 +31,7 @@ const listDevelopers = async ()=>{
 
 const removeDeveloper = async(_id)=>{
     await Developer.findByIdAndDelete(_id)
-    console.log("Assistant deleted")
+    console.log("Developer deleted")
     await connection.close()
 }
 
@@ -39,7 +39,7 @@ const removeDeveloper = async(_id)=>{
 
 const updateDeveloper = async(_id, newdeveloper)=>{
     await Developer.updateOne({_id}, newdeveloper);
-    console.log("Asistant updated");
+    console.log("Developer updated");
     await connection.close();
 }
 
@@ -48,28 +48,26 @@ const updateDeveloper = async(_id, newdeveloper)=>{
 const findDeveloper = async (devUser)=> {
    const search =  new RegExp(devUser, "i");
    const user = await Developer.find({
-       $or:[{name: search},{email: search}, {category: search},{date: search}]
+       $or:[ {category: search},{date: search}]
    })
-   console.log(user)
    if(user.length === 0){
-       console.log("Assistant not found")
+       console.log("Developers not found")
        await connection.close();
        process.exit(0);
    }else{
-       console.table(
-        {
-            id: user[0]._id.toString(),
-            name: user[0].name,
-            email: user[0].email,
-            category: user[0].category,
-            phone: user[0].email,
-            date: user[0].date,
-        } 
-       )
+       console.table(user.map(developer =>({
+        _id: developer._id.toString(),
+                name: developer.name,
+                email: developer.email,
+                category: developer.category,
+                phone:developer.phone,
+                date:developer.date
+       })))
        await connection.close();
        process.exit(0);
    }
 }
+
 
 
 

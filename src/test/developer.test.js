@@ -1,30 +1,30 @@
-const Developer = require("../models/developers")
+const Developer = require("../models/modelDeveloper")
 const {connectDatabase, connection} = require("../database/db")
-const{listDevelopers} = require("../controllers/developerControllers")
+
+
+//! Testing: you can run npm run test to check if all is correct and you can run npm run dbTest and play with all the commands like npm run dbTest list to see the Database only for testing.
+
+
 
 describe("Test backend", ()=>{
+
     beforeAll(async ()=>{
         await connectDatabase()
     })
+
+
     afterAll(async ()=>{
         await connection.close();
     });
+    
+    //Testings
+
+    //You can change the value of const expected to see errors in the test if you want and dont worry this database is only for testings(With the same info of the original)
 
     it("Has a module", ()=>{
         expect(Developer).toBeDefined();
     });
 
-    describe("get developer", () => {
-        it("gets a developer", async ()=>{
-           const developer = new Developer({name:"getTest", email:"getTest@gmail.com", category:"Back", phone:"652233009", date:"Mar 2, 2021"});
-           await developer.save();
-           const foundDeveloper= await Developer.findOne({name: "getTest"});
-           const expected = "getTest";
-           const actual = foundDeveloper.name;
-           expect(actual).toEqual(expected);
-        })
-    });
-
 
     describe("get developer", () => {
         it("gets a developer", async ()=>{
@@ -36,7 +36,6 @@ describe("Test backend", ()=>{
            expect(actual).toEqual(expected);
         })
     });
-
 
     describe("save a developer", () => {
         it("save a developer", async ()=>{
@@ -61,17 +60,12 @@ describe("Test backend", ()=>{
         })
     });
 
-    describe("probando el otro endpoint haber que tal", () => {
-        it("probando el otro aendpoint haber que tal", async ()=>{
-            const probando = await Developer.find().lean();
-            console.log(probando)
-            const developer = new Developer({name:"UpdateDev", email:"Updated@gmail.com", category:"Back", phone:"652233009", date:"Mar 2, 2021"});
-            await developer.save();
-            developer.name="Updated";
-            const updateDev = await developer.save();
-            const expected = "Updated";
-            const actual =updateDev.name;
-            expect(actual).toEqual(expected);
+    describe("list developers", () => {
+        it("list a developer", async ()=>{
+            const developer = await Developer.find().lean();
+            const type= typeof developer
+            const expected= "object"
+            expect(type).toEqual(expected)
         })
     });
 });

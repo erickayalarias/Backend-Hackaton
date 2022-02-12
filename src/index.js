@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-// Connection with the Database 
+// Connection with the Database
 
 const {connectDatabase} = require("./database/db");
 require("./commands/commands");

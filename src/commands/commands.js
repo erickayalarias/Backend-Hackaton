@@ -5,12 +5,13 @@ const {Questions} = require("./questions")
 
 
 program
-.version("1.0")
-.description("Command line for managing the developers, you can see the help section that will describe the commands and how work with them.");
+.version("Hackaton 1.0")
+.description("Command line for managing the developers, you can see the help section that will describe the commands and how work with them. \n Examples of commands \n ADD DEVELOPER: mwc add \n LIST TABLE: mwc list \n UPDATE DEVELOPER: mwc update 620557a04d8f47f99edc3fe2 \n DELETE DEVELOPER: mwc delete \n EVENT DAYS: mwc event \n FIND BY CATEGORY OR DATE: mwc find Front");
 
 
 
-//! Here is the commands. You can List, Add, Delete, Update and Find the developers
+//! Here is the commands. You can List, Add, Delete, Update and Find by Category or Date
+
 
 // Add a new developer at the database
 
@@ -25,7 +26,7 @@ alias("a")
 
 
 
-// List the list of the developers in JSON FILE
+// List the list of the developers in mongoDB
 
 program
 .command("list")
@@ -34,33 +35,30 @@ program
 .action(()=> listDevelopers())
 
 
-// Delete the developer passing the _id
+// Delete the developer
 
 program
-.command("delete <id>")
+.command("delete")
 .alias("d")
-.description("Delete the developer selected (You have to pass the _id of the developer) ")
-.action(async (_id)=> {
-    const id = await prompt({
-           type: "input",
-            message: "Put the name",
-            name:"name" 
+.description("Delete the developer selected ")
+.action(async ()=> {
+    const dev = await prompt({
+            type: "input",
+            message: "Pass the _id to delete the Developer (If ctrl-v doesnt work try ctrl-alt-v or right click): ",
+            name:"id" 
     })
-    console.log(id.name)
-    console.log(_id)
-    // removeDeveloper(_id)
-
+    removeDeveloper(dev.id)
 })
 
 
-//Update the developer 
+//Update the developer passing the _id.   Example: mwc update620557a04d8f47f99edc3fe2
 
 program
 .command("update <id>")
 .alias("u")
-.description("Update the information of the developer")
+.description("Update the information of the developer (You have to pass the _id in order to update)")
 .action( async (_id)=>{
-    if (!_id) return console.log("please provide id")
+    if (!_id) return console.log("Provide _id")
     const answers = await prompt(Questions())
     await updateDeveloper(_id, answers)
 }
@@ -71,23 +69,30 @@ program
 
 
 program
-.command("MWC-days")
+.command("event")
 .description("Show the days that the MWC are going to be")
-.alias("MWC")
+.alias("e")
 .action(()=>{
-    console.log("The event of the MWC are going to be between these days:\n Feb 28, 2021 \n Mar 1, 2021 \n Mar 2, 2021 \n Mar 3, 2021")
+    console.log("The mwc is going to be between:")
+    console.log("Feb 28, 2021")
+    console.log("Mar 1, 2021")
+    console.log("Mar 2, 2021")
     process.exit(0);
 })
 
 
-//Find the developers via Name/Email/Category
+//Find the developers 
 
 
 program
 .command("find <devUser>")
 .alias("f")
-.description("You can find any user or show only the category (You can put his Name/Email/Category)")
-.action((devUser)=> findDeveloper(devUser))
+.description("You can find the developers in a certain category or a date)")
+.action((devUser)=>{
+    if (!devUser) return console.log("Provide _id")
+    findDeveloper(devUser)
+
+})
 
 
 program.parse(process.argv);
