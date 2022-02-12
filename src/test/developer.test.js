@@ -1,5 +1,5 @@
 const Developer = require("../models/developers")
-const {connectDB, connection} = require("../db")
+const {connectDB, connection} = require("../database/db")
 const{listDevelopers} = require("../controllers/developerControllers")
 
 describe("Test backend", ()=>{
@@ -60,7 +60,7 @@ describe("Test backend", ()=>{
             expect(actual).toEqual(expected);
         })
     });
-    
+
     describe("probando el otro endpoint haber que tal", () => {
         it("probando el otro aendpoint haber que tal", async ()=>{
             const probando = await Developer.find().lean();

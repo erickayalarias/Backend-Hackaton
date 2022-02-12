@@ -1,5 +1,6 @@
 #!/usr/bin/env node
-const {connectDB} = require("./db");
+
+const {connectDB} = require("./database/db");
 require("./commands");
 
 async function main(){

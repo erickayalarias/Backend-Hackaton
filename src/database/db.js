@@ -1,5 +1,5 @@
 const {connect, connection} = require("mongoose")
-const {MONGODB_URI, MONGODB_URI_TEST, NODE_ENV} = require("./config")
+const {MONGODB_URI, MONGODB_URI_TEST, NODE_ENV} = require("../config/config")
 
 
 

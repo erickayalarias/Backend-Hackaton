@@ -1,5 +1,5 @@
 const Developer = require("../models/developers")
-const {connection} = require("../db")
+const {connection} = require("../database/db")
 
 
 
@@ -66,7 +66,6 @@ const findDeveloper = async (devUser)=> {
        )
        await connection.close();
        process.exit(0);
-  
    }
 //    console.log(devUser)
 }
