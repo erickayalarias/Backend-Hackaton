@@ -12,7 +12,7 @@ This project is made for the competition of the HACKATON OF 2022
 
 
 
-<!-- TABLE OF CONTENTS -->
+
 <details>
   <summary><b>Table of Contents</b></summary>
   <ol>
@@ -103,26 +103,6 @@ There are two databases one control the main database with the command (mwc) and
 <b>You will find more info about the commands in Allcommands section.</b>
 
 
-### allCommands
-<p align="center"><b>List of all the commands:</b> </p>
-
-
-mwc: Show a little description of everything and also explain how the commands works and the shortcuts that they have. 
-For example <b>mwc l</b> or <b>mwc list </b> will do the same.  <br />
-
-<b>mwc l</b>|<b>list</b>            -Show the list of the developers that are going to assist at the MWC.<br /> <br />
-<b>mwc delete</b>|<b>d</b>          -It will ask for the _id, and then its going to delete that developer.<br /><br />
-<b>mwc update</b>|<b>u</b> "id"     -Update the information of the developer (You have to pass the _id in order to update) example: mwc update 620557a04d8f47f99edc3fe2 <br /><br />
-<b>mwc event</b>|<b>e</b>            -Show the days that the MWC are going to be.<br /><br />
-<b>mwc find</b>|<b>f</b> "devUser"   -You can find the developers in a certain category or a date (You have to pass the category or the date) example: mwc find Back<br /><br />
-<b>mwc -V</b>|<b>--version</b>       -To check the version<br /><br />
-
-<p align="center"><b>Testing</b> </p>
-
-
-npm run test           -It will start the tests, you can check how the test works in src/test/developer.test.js.<br /><br />
-
-npm run dbTest         -You will find the database for testings, have the same information that the original database and you can execute the same commands that mwc does.
 
 ### Installation
 
@@ -134,10 +114,32 @@ npm run dbTest         -You will find the database for testings, have the same i
 
 
 
-<!-- CONTACT -->
+### allCommands
+<p align="center"><b>List of all the commands:</b> </p>
+
+
+<b>mwc</b> Show a little description of everything and also explain how the commands works and the shortcuts that they have. 
+For example <b>mwc l</b> or <b>mwc list </b> will do the same.  <br />
+
+<b>mwc l</b>|<b>list</b>   -Show the list of the developers that are going to assist at the MWC.<br /> <br />
+<b>mwc delete</b>|<b>d</b> -It will ask for the _id, and then its going to delete that developer.<br /><br />
+<b>mwc update</b>|<b>u</b> -Update the information of the developer (You have to pass the _id in order to update) example: mwc update 620557a04d8f47f99edc3fe2 <br /><br />
+<b>mwc event</b>|<b>e</b>  -Show the days that the MWC are going to be.<br /><br />
+<b>mwc find</b>|<b>f</b>   -You can find the developers in a certain category or a date (You have to pass the category or the date) example: mwc find Back<br /><br />
+<b>mwc -V</b>|<b>--version</b>    To check the version<br /><br />
+
+<p align="center"><b>Testing</b> </p>
+
+
+<b>npm run test</b>           -It will start the tests, you can check how the test works in src/test/developer.test.js.<br /><br />
+
+<b>npm run dbTest</b>         -You will find the database for testings, have the same information that the original database and you can execute the same commands that mwc does.
+
+
+
 ## Contact
 
-Erick Ayala Arias - (https://www.linkedin.com/in/erick-ayala-arias-34b787151/) - email@email_client.com
+Erick Ayala Arias - (https://www.linkedin.com/in/erick-ayala-arias-34b787151/)
 
 Project Link: (https://github.com/erickayalarias/Backend-Hackaton.git)
 
