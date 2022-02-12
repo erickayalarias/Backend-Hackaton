@@ -33,14 +33,25 @@ program
 .description("Show the list of the developers that are going to assist at the MWC")
 .action(()=> listDevelopers())
 
+
 // Delete the developer passing the _id
 
 program
 .command("delete <id>")
 .alias("d")
 .description("Delete the developer selected (You have to pass the _id of the developer) ")
-.action((_id)=> removeDeveloper(_id)
-)
+.action(async (_id)=> {
+    const id = await prompt({
+           type: "input",
+            message: "Put the name",
+            name:"name" 
+    })
+    console.log(id.name)
+    console.log(_id)
+    // removeDeveloper(_id)
+
+})
+
 
 //Update the developer 
 
@@ -58,6 +69,7 @@ program
 
 //Show the description of the days that the MWC are going to be
 
+
 program
 .command("MWC-days")
 .description("Show the days that the MWC are going to be")
@@ -69,6 +81,7 @@ program
 
 
 //Find the developers via Name/Email/Category
+
 
 program
 .command("find <devUser>")

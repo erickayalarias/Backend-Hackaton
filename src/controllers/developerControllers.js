@@ -1,11 +1,13 @@
-const Developer = require("../models/developers")
+const Developer = require("../models/modelDeveloper")
 const {connection} = require("../database/db")
 
+
+//! There you will find the controllers that you pass from commands
 
 
 const insertDeveloper = async (developer) =>{
     await Developer.create(developer)
-    console.log("New assistant inserted")
+    console.log(`Developer ${developer.name} added succesful`)
     await connection.close()
 }
 
@@ -67,7 +69,6 @@ const findDeveloper = async (devUser)=> {
        await connection.close();
        process.exit(0);
    }
-//    console.log(devUser)
 }
 
 

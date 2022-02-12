@@ -1,10 +1,12 @@
 #!/usr/bin/env node
 
-const {connectDB} = require("./database/db");
+// Connection with the Database 
+
+const {connectDatabase} = require("./database/db");
 require("./commands/commands");
 
-async function main(){
-    await connectDB();
+async function principalMain(){
+    await connectDatabase();
 }
 
-main();
+principalMain();

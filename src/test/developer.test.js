@@ -1,10 +1,10 @@
 const Developer = require("../models/developers")
-const {connectDB, connection} = require("../database/db")
+const {connectDatabase, connection} = require("../database/db")
 const{listDevelopers} = require("../controllers/developerControllers")
 
 describe("Test backend", ()=>{
     beforeAll(async ()=>{
-        await connectDB()
+        await connectDatabase()
     })
     afterAll(async ()=>{
         await connection.close();
