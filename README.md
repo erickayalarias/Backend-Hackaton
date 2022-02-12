@@ -111,27 +111,29 @@ There are two databases one control the main database with the command (mwc) and
 <p align="center">* <b>Test command:</b> npm run test </p>
 <p align="center">* <b>Database-Test command:</b>  npm run dbTest</p>
 
+<br />
 
 <b>You will find more info about the commands in Allcommands section.</b>
 
 
 ### allCommands
+<p align="center"><b>List of all the commands:</b> </p>
 
-                                                   List of all the commands:
 
 mwc: Show a little description of everithing and also explain how the commands works and the shortcuts that they have. 
-For example [mwc l] or [mwc list] will do the same. 
+For example [mwc l] or [mwc list] will do the same.  <br />
 
-mwc l|list             -Show the list of the developers that are going to assist at the MWC.
-mwc delete|d           -It will ask for the _id, and then its going to delete that developer.
-mwc update|u  <id>     -Update the information of the developer (You have to pass the _id in order to update) example: mwc update 620557a04d8f47f99edc3fe2
-mwc event|e            -Show the days that the MWC are going to be.
-mwc find|f <devUser>   -You can find the developers in a certain category or a date (You have to pass the category or the date) example: mwc find Back
-mwc -V|--version       -To check the version
-                                                          
-                                                        Testing
+mwc l|list             -Show the list of the developers that are going to assist at the MWC.<br /> <br />
+mwc delete|d           -It will ask for the _id, and then its going to delete that developer.<br /><br />
+mwc update|u  <id>     -Update the information of the developer (You have to pass the _id in order to update) example: mwc update 620557a04d8f47f99edc3fe2 <br /><br />
+mwc event|e            -Show the days that the MWC are going to be.<br /><br />
+mwc find|f <devUser>   -You can find the developers in a certain category or a date (You have to pass the category or the date) example: mwc find Back<br /><br />
+mwc -V|--version       -To check the version<br /><br />
 
-npm run test           -It will start the tests, you can check how the test works in src/test/developer.test.js.
+<p align="center"><b>Testing</b> </p>
+
+
+npm run test           -It will start the tests, you can check how the test works in src/test/developer.test.js.<br /><br />
 
 npm run dbTest         -You will find the database for testings, have the same information that the original database and you can execute the same commands that mwc does.
 
@@ -148,9 +150,9 @@ npm run dbTest         -You will find the database for testings, have the same i
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+Erick Ayala Arias - (https://www.linkedin.com/in/erick-ayala-arias-34b787151/) - email@email_client.com
 
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
+Project Link: (https://github.com/erickayalarias/Backend-Hackaton.git)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
