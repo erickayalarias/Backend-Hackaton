@@ -2,10 +2,6 @@
 This project is made for the competition of the HACKATON OF 2022
 
 
-
-[LinkedIn][https://www.linkedin.com/in/erick-ayala-arias-34b787151/]
-
-
 <h3 align="center">Backend-Hackaton</h3>  
   <p align="center">
     <br />
@@ -49,7 +45,7 @@ I used Mongodb to deploy the database in the cloud and used mongoose to make the
 
 You will find in src-folder all the files and folders in order, also some comments in the files.
 
-NOTE: I didn't make a lot of comments because in most cases the name of the function, tell you what that function is doing.
+
 
 <p align="center"> LIST OF TASKS DEMANDED</p>
 
@@ -62,8 +58,8 @@ DONE ✅ Task 3 → Generate a command CLI that make a display of the informatio
 DONE ✅ Task 4 → Generate a command CLI that make a display of the developers.
 
 DONE ✅ Task 5 → Generate a command CLI that let you add a new developer and update the Database.
-
-DONE ✅ Also added, some new features like edit, delete, find by category or date
+</br></br>
+✅ Also added, some new features like edit, delete, find by category or date
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -114,12 +110,12 @@ There are two databases one control the main database with the command (mwc) and
 mwc: Show a little description of everything and also explain how the commands works and the shortcuts that they have. 
 For example <b>mwc l</b> or <b>mwc list </b> will do the same.  <br />
 
-mwc l|list             -Show the list of the developers that are going to assist at the MWC.<br /> <br />
-mwc delete|d           -It will ask for the _id, and then its going to delete that developer.<br /><br />
-mwc update|u  <id>     -Update the information of the developer (You have to pass the _id in order to update) example: mwc update 620557a04d8f47f99edc3fe2 <br /><br />
-mwc event|e            -Show the days that the MWC are going to be.<br /><br />
-mwc find|f <devUser>   -You can find the developers in a certain category or a date (You have to pass the category or the date) example: mwc find Back<br /><br />
-mwc -V|--version       -To check the version<br /><br />
+<b>mwc l</b>|<b>list</b>            -Show the list of the developers that are going to assist at the MWC.<br /> <br />
+<b>mwc delete</b>|<b>d</b>          -It will ask for the _id, and then its going to delete that developer.<br /><br />
+<b>mwc update</b>|<b>u</b> "id"     -Update the information of the developer (You have to pass the _id in order to update) example: mwc update 620557a04d8f47f99edc3fe2 <br /><br />
+<b>mwc event</b>|<b>e</b>            -Show the days that the MWC are going to be.<br /><br />
+<b>mwc find</b>|<b>f</b> "devUser"   -You can find the developers in a certain category or a date (You have to pass the category or the date) example: mwc find Back<br /><br />
+<b>mwc -V</b>|<b>--version</b>       -To check the version<br /><br />
 
 <p align="center"><b>Testing</b> </p>
 
