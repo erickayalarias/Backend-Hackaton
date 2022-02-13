@@ -33,9 +33,8 @@ const Questions =  () =>{
                 "Feb 28, 2021","Mar 1, 2021","Mar 2, 2021", "Mar 3, 2021",
             ]
         }
-    
     ];
-}  
+}
 
 module.exports = {
     Questions

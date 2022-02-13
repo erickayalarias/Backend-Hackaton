@@ -1,7 +1,7 @@
 const {program} = require("commander");
 const {prompt} = require("inquirer");
 const {listDev, removeDev, updateDev, insertDev, filterDev} =require("../controllers/developerControllers")
-const {Questions} = require("./questions")
+const {Questions} = require("../models/questions")
 
 // Here are the commands. You can List, Add, Delete, Update and Filter by Category or Date
 
@@ -44,7 +44,7 @@ program
     const dev = await prompt({
             type: "input",
             message: "Pass the _id to delete the Developer (If ctrl-v doesnt work try ctrl-alt-v or right click): ",
-            name:"id" 
+            name:"id"
     })
     removeDev(dev.id)
 })
@@ -83,10 +83,10 @@ program
 
 
 program
-.command("find <devUser>")
+.command("find <devFilter>")
 .alias("f")
 .description("You can find the developers in a certain category or a date)")
-.action((devUser)=>filterDev(devUser))
+.action((devFilter)=>filterDev(devFilter))
 
 
 program.parse(process.argv);
