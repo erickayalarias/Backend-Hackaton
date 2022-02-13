@@ -3,13 +3,11 @@ const {prompt} = require("inquirer");
 const {listDev, removeDev, updateDev, insertDev, filterDev} =require("../controllers/developerControllers")
 const {Questions} = require("./questions")
 
-//! Here are the commands. You can List, Add, Delete, Update and Filter by Category or Date
+// Here are the commands. You can List, Add, Delete, Update and Filter by Category or Date
 
 program
 .version("Hackaton 1.0")
 .description("Command line for managing the developers, you can see the help section that will describe the commands and how to work with them. \n Examples of commands \n ADD DEVELOPER: mwc add \n LIST TABLE: mwc list \n UPDATE DEVELOPER: mwc update 620557a04d8f47f99edc3fe2 \n DELETE DEVELOPER: mwc delete \n EVENT DAYS: mwc event \n FILTER BY CATEGORY OR DATE: mwc find Front");
-
-
 
 
 
@@ -58,10 +56,9 @@ program
 .command("update <id>")
 .alias("u")
 .description("Update the information of the developer (you have to pass the _id in order to update it)")
-.action( async (_id)=>{
-    if (!_id) return console.log("Provide _id")
+.action( async (id)=>{
     const answers = await prompt(Questions())
-    await updateDev(_id, answers)
+    await updateDev(id, answers)
 }
 )
 
