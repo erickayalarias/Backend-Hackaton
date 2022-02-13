@@ -1,6 +1,6 @@
 require("dotenv").config()
 
-// Config for the URL, the url came from .env but if don't exist choose the Url passed. Read in Readme.
+// Config for the URL, the url comes from .env but if it doesn't exist choose the Url passed. Read in Readme.
 
 module.exports={
     MONGODB_URI: process.env.MONGODB_URI || "mongodb+srv://Erick:Hackaton2022@cluster0.3xi5g.mongodb.net/hackaton2022?retryWrites=true&w=majority",

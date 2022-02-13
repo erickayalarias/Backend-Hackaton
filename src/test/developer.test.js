@@ -2,7 +2,7 @@ const Developer = require("../models/modelDeveloper")
 const {connectDatabase, connection} = require("../database/db")
 
 
-//! Testing: you can run npm run test to check if all is correct and you can run npm run dbTest and play with all the commands like npm run dbTest list to see the Database only for testing.
+//! Testing: you can run npm run test to check if all is correct and you can run [npm run dbTest] and play with all the commands like [npm run dbTest list] to see the Database only for testing.
 
 
 
@@ -19,7 +19,7 @@ describe("Test backend", ()=>{
 
     //Testings
 
-    //You can change the value of const expected to see errors in the test if you want and dont worry this database is only for testings(With the same info of the original)
+    //You can change the value of const expected to see errors in the test if you want.
 
     it("Has a module", ()=>{
         expect(Developer).toBeDefined();
