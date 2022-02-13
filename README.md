@@ -45,12 +45,12 @@ I used MongoDB to deploy the database in the cloud and Mongoose to make the conn
 
 You will find in src-folder all the files and folders in order, also some comments in the files.
 
-* You will see that the file .env its not in .gitignore, because there is no sensitive information in the database but I know that normally the .env file has to be in gitignore also in config file [src/config/config] I check if the .env exists, if it doesn't use the specefied URL.
+* You will see that the file .env its not in .gitignore, because there is no sensitive information in the database but I know that normally the .env file has to be in gitignore also in config file [src/config/config] I check if the .env exists, if it doesn't use the specified URL.
 
 
 <p align="center"> LIST OF TASKS DEMANDED</p>
 
-DONE ✅ Task 1 → Create a developer model that contains the following information: Name, Email, Category ( Front, Back, Mobile, Data), Phone, Days to assist at the MWC ( 28 Feb, 1 -3 Marzo).
+DONE ✅ Task 1 → Create a developer model that contains the following information: Name, Email, Category ( Front, Back, Mobile, Data), Phone, Days to assist at the MWC ( 28 Feb, 1 -3 March).
 
 DONE ✅ Task 2 → Insert the data of the .json in a Database. Link: (https://challenges-asset-files.s3.us-east-2.amazonaws.com/data_sets/mwc22.json).
 
@@ -60,7 +60,7 @@ DONE ✅ Task 4 → Generate a command CLI that displays the developers list.
 
 DONE ✅ Task 5 → Generate a command CLI that lets you add a new developer and update the Database.
 </br>
-</br>
+
 EXTRA ✅ Also added, some new features like edit, delete and filter by category or date.
 
 
@@ -76,11 +76,11 @@ EXTRA ✅ Also added, some new features like edit, delete and filter by category
 
 Dependencies used:
 Commander,
-cross-env,
-dotenv,
-inquirer,
-mongoose,
-jest
+Cross-env,
+Dotenv,
+Inquirer,
+Mongoose,
+Jest
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
