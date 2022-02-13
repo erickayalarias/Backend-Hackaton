@@ -95,6 +95,7 @@ Once started you have to open the terminal and you can start.
 
 There are two databases one control the main database with the command (mwc) and the other is for testing purpose only (npm run test) and if you want to see the test Database you can do (npm run dbTest).
 
+* NOTE: The test database have the same information that the (mwc) have.
 
 <p align="center">* <b>Main command:</b>  mwc </p>
 <p align="center">* <b>Test command:</b> npm run test </p>
